@@ -7,8 +7,18 @@ public class Car {
 		
 	}
 	
-	public checkMove(int newx, int newy){
-		if(newx<Board.getx() && newy<Baord.gety()){
-			//continue
-		}
+	public boolean checkMove(int newx, int newy, Board board){
+		if(newx<board.getx() && newy<board.gety()){
+			return true;
+		}else{
+			return false;
+	}
+		
+		
+	public 	
+		
+		
+		
+		
+		
 }
