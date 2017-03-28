@@ -1,21 +1,21 @@
 package testme;
 
 public abstract class Car {
+	
+	private int length;
+	private int posx;
+	private int posy;
 
-	public Car(int x, int y){
-		x=x+y;
-		
+	public Car(int length, int x, int y){
+		this.length = length;
+		posx = x;
+		posy = y;
 	}
 	
-	public boolean checkMove(int newx, int newy, Board board){
-		if(newx<board.getx() && newy<board.gety()){
-			return true;
-		}else{
-			return false;
-	}
+	
 		
 		
-	public 	
+
 		
 		
 		
