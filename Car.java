@@ -1,6 +1,6 @@
 package testme;
 
-public class Car {
+public abstract class Car {
 
 	public Car(int x, int y){
 		x=x+y;
