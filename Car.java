@@ -12,7 +12,8 @@ public abstract class Car {
 		posy = y;
 	}
 	
-	
+	public void moveCar(){
+	}
 		
 		
 
