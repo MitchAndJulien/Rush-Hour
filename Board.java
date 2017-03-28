@@ -14,3 +14,10 @@ public class Board {
     //this needs to restart the entire board to 
   
 }
+  
+  public boolean checkMove(int newx, int newy, Board board){
+		if(newx<board.getx() && newy<board.gety()){
+			return true;
+		}else{
+			return false;
+	}
