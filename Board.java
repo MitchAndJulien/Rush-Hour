@@ -8,5 +8,9 @@ public class Board {
     
     
     //after initialization that should be it for now
+  }
+  
+  public Restart(){
+    //this needs to restart the entire board to 
   
 }
