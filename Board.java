@@ -21,3 +21,7 @@ public class Board {
 		}else{
 			return false;
 	}
+	  
+ public validMove(Car a, int newx, int newy){
+	 
+ }
