@@ -19,9 +19,7 @@ public class HorizontalCar {
 		}
 	}
     
-    public boolean validMove(Car a, int x, int y){
-	    
-    }
+    
     
     
     
