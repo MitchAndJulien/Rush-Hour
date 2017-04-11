@@ -2,7 +2,29 @@
 public class Level1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		// horizontal
+		player = (2,2);
+		
+		
+		// vertical
+		2blockcar = (2,3);
+		
+		// vertical
+		2blockcar = (5,4);
+		
+		
+		// vertical
+		3blockcar = (0,0);
+		
+		// vertical
+		3blockcar = (3,0);
+		
+		// horizontal
+		3blockcar = (3,3);
+		
+		// horizontal
+		3blockcar = (2,5);
 
 	}
 
