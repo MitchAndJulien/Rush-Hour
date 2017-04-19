@@ -8,7 +8,7 @@ public class Level5 {
 		
 		
 		// horizontal
-		2blockcar1 = (0,0);
+		2blockcar1 = (1,0);
 		
 		// vertical
 		2blockcar2 = (0,4);
@@ -20,17 +20,17 @@ public class Level5 {
 		2blockcar4 = (5,2);
 		
 		// h
-		2blockcar5 = (4,4);
+		2blockcar5 = (5,4);
 		
 		// h
-		2blockcar6 = (4,5);
+		2blockcar6 = (5,5);
 		
 		
 		// v
 		3blockcar1 = (0,1);
 		
 		// h
-		3blockcar2 = (1,3);
+		3blockcar2 = (3,3);
 		
 		// v
 		3blockcar3 = (3,0);
