@@ -21,10 +21,10 @@ public class Level4 {
 		3blockcar = (3,0);
 		
 		// horizontal
-		3blockcar = (3,3);
+		3blockcar = (5,3);
 		
 		// horizontal
-		3blockcar = (2,5);
+		3blockcar = (4,5);
 
 	}
 
