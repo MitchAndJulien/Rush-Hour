@@ -7,28 +7,28 @@ public class Level10 {
 		player = (2,2);
 		
 		// h
-		2blockcar1 = (0,0);
+		2blockcar1 = (1,0);
 		
 		// h
-		2blockcar2 = (0,1);
+		2blockcar2 = (1,1);
 		
 		// v
 		2blockcar3 = (2,0);
 		
 		// h
-		2blockcar4 = (4,0);
+		2blockcar4 = (5,0);
 		
 		// h
-		2blockcar5 = (0,5);
+		2blockcar5 = (1,5);
 		
 		// v
 		2blockcar6 = (3,4);
 		
 		// h
-		2blockcar7 = (4,4);
+		2blockcar7 = (5,4);
 		
 		// h
-		2blockcar8 = (4,5);
+		2blockcar8 = (5,5);
 		
 		// v
 		3blockcar1 = (0,2);
@@ -37,7 +37,7 @@ public class Level10 {
 		3blockcar2 = (5,1);
 		
 		// h
-		3blockcar3 = (1,3);
+		3blockcar3 = (3,3);
 
 	}
 
