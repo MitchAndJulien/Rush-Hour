@@ -16,23 +16,23 @@ public class Level2 {
 		2blockcar3 = (4,2);
 		
 		// horizontal
-		2blockcar4 = (0,5);
+		2blockcar4 = (1,5);
 		
 		// vertical
 		2blockcar5 = (2,4);
 		
 		// horizontal
-		2blockcar6 = (3,5);
+		2blockcar6 = (4,5);
 		
 		// horizontal
-		2blockcar7 = (4,4);
+		2blockcar7 = (5,4);
 		
 		
 		// horizontal
-		3blockcar1 = (3,0);
+		3blockcar1 = (5,0);
 		
 		// horizontal
-		3blockcar1 = (0,3);
+		3blockcar1 = (2,3);
 		
 		// vertical
 		3blockcar1 = (5,1);
