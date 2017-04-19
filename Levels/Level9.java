@@ -8,13 +8,13 @@ public class Level9 {
 		player = (1,2);
 		
 		// h
-		2blockcar1 = (2,0);
+		2blockcar1 = (3,0);
 		
 		// h
-		2blockcar2 = (4,0);
+		2blockcar2 = (5,0);
 		
 		// h
-		2blockcar3 = (4,1);
+		2blockcar3 = (5,1);
 		
 		// v
 		2blockcar4 = (2,4);
@@ -29,7 +29,7 @@ public class Level9 {
 		2blockcar7 = (5,4);
 		
 		// h
-		3blockcar1 = (1,3);
+		3blockcar1 = (3,3);
 		
 		// v
 		3blockcar2 = (0,3);
