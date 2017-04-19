@@ -7,10 +7,10 @@ public class Level7 {
 		player = (2,2);
 		
 		// h
-		2blockcar1 = (2,0);
+		2blockcar1 = (3,0);
 		
 		// h
-		2blockcar2 = (2,3);
+		2blockcar2 = (3,3);
 		
 		// v
 		2blockcar3 = (1,0);
