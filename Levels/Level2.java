@@ -27,7 +27,5 @@ public class Level2 {
 		
 		3blockcar3 = (5,1, "vertical");
 		
-
 	}
-
 }
