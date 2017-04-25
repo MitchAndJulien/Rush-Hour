@@ -6,6 +6,7 @@ public class Level1 {
 		// horizontal
 		player = (2,2);
 		
+		
 		// horizontal
 		2blockcar1 = (1,0);
 		
