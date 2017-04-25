@@ -5,6 +5,7 @@ public class Level9 {
 		
 		player = (1,2, "horizontal");
 		
+		
 		2blockcar1 = (3,0, "horizontal");
 		
 		2blockcar2 = (5,0, "horizontal");
