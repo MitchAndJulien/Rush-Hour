@@ -3,39 +3,29 @@ public class Level6 {
 
 	public static void main(String[] args) {
 		
-		// h
-		player = (2,2);
+		player = (2,2, "horizontal");
 		
-		// h
-		2blockcar1 = (1,0);
 		
-		// h
-		2blockcar2 = (1,1);
+		2blockcar1 = (1,0, "horizontal");
 		
-		// h
-		2blockcar3 = (1,3);
+		2blockcar2 = (1,1, "horizontal");
 		
-		// v
-		2blockcar4 = (2,3);
+		2blockcar3 = (1,3, "horizontal");
 		
-		// v
-		2blockcar5 = (3,0);
+		2blockcar4 = (2,3, "vertical");
 		
-		// v
-		2blockcar6 = (0,4);
+		2blockcar5 = (3,0, "vertical");
 		
-		// v
-		3blockcar = (3,2);
+		2blockcar6 = (0,4, "vertical");
 		
-		// v
-		3blockcar = (4,1);
 		
-		// v
-		3blockcar = (5,1);
+		3blockcar1 = (3,2, "vertical");
 		
-		// h
-		3blockcar = (5,5);
-
+		3blockcar2 = (4,1, "vertical");
+		
+		3blockcar3 = (5,1, "vertical");
+		
+		3blockcar4 = (5,5, "horizontal");
+		
 	}
-
 }
