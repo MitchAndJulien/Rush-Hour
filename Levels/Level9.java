@@ -3,40 +3,28 @@ public class Level9 {
 
 	public static void main(String[] args) {
 		
+		player = (1,2, "horizontal");
 		
-		// h
-		player = (1,2);
+		2blockcar1 = (3,0, "horizontal");
 		
-		// h
-		2blockcar1 = (3,0);
+		2blockcar2 = (5,0, "horizontal");
 		
-		// h
-		2blockcar2 = (5,0);
+		2blockcar3 = (5,1, "horizontal");
 		
-		// h
-		2blockcar3 = (5,1);
+		2blockcar4 = (2,4, "vertical");
 		
-		// v
-		2blockcar4 = (2,4);
+		2blockcar5 = (3,1, "vertical");
 		
-		// v
-		2blockcar5 = (3,1);
+		2blockcar6 = (5,1, "vertical");
 		
-		// v
-		2blockcar6 = (5,1);
+		2blockcar7 = (5,4, "vertical");
 		
-		// v
-		2blockcar7 = (5,4);
 		
-		// h
-		3blockcar1 = (3,3);
+		3blockcar1 = (3,3, "horizontal");
 		
-		// v
-		3blockcar2 = (0,3);
+		3blockcar2 = (0,3, "vertical");
 		
-		// v
-		3blockcar3 = (4,2);
-
+		3blockcar3 = (4,2, "vertical");
+		
 	}
-
 }
