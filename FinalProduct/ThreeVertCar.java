@@ -21,21 +21,21 @@ public class ThreeVertCar implements VertCar{
 	private JButton downButton;
 	private JButton middleButton;
 	private JButton upButton;
-	private int downButtonRow;
-	private int downButtonColumn;
+	private int upButtonRow;
+	private int upButtonColumn;
 	private final int BUTTON_SIZE=150;
 	//private int buttonCode;
 	
 	public ThreeVertCar(int row, int column, int code, int[][] trafficJam, Board board){
 		//Bottom side is primary side
-		if(row>=6 || column>=5){
-			System.out.println("Inputted TwoHorzCar is not in bounds of 6x6");
+		if(row>=3 || column>5 || trafficJam[row][column] != 0 || trafficJam[row+1][column] != 0 || trafficJam[row+2][column] !=0){
+			System.out.println("failed to add ThreeVertCar");
 		}else{
 		this.row=row;
 		this.column=column;
 		this.carCode=code;
-		downButtonRow=row*BUTTON_SIZE;
-		downButtonColumn=column*BUTTON_SIZE;
+		upButtonRow=row*BUTTON_SIZE;
+		upButtonColumn=column*BUTTON_SIZE;
 		trafficJam[row][column]=code;
 		trafficJam[row][column+1]=code;
 		}
@@ -49,42 +49,63 @@ public class ThreeVertCar implements VertCar{
 		
 		
 		//according to row column make button
-		downButton = new JButton();
-		downButton.setBounds(downButtonColumn, downButtonRow, BUTTON_SIZE, BUTTON_SIZE);
-		downButton.setText("move down");
-		downButton.setBorder(BorderFactory.createRaisedBevelBorder());
+		createButton(upButtonColumn,upButtonRow+2*BUTTON_SIZE, BUTTON_SIZE, "move down", carCode);
+		//downButton = new JButton();
+		//downButton.setBounds(upButtonColumn,upButtonRow+2*BUTTON_SIZE, BUTTON_SIZE, BUTTON_SIZE);
+		//downButton.setText("move down");
+		//downButton.setBorder(BorderFactory.createRaisedBevelBorder());
 		board.addButton(downButton);
 		moveDownPress(trafficJam,downButton);
 		
-		upButton = new JButton();
-		upButton.setBounds(downButtonColumn, downButtonRow+BUTTON_SIZE, BUTTON_SIZE, BUTTON_SIZE);
-		upButton.setText("move up");
-		upButton.setBorder(BorderFactory.createRaisedBevelBorder());
+		createButton(upButtonColumn, upButtonRow, BUTTON_SIZE, "move up", carCode);
+		//upButton = new JButton();
+		//upButton.setBounds(upButtonColumn, upButtonRow, BUTTON_SIZE, BUTTON_SIZE);
+		//upButton.setText("move up");
+		//upButton.setBorder(BorderFactory.createRaisedBevelBorder());
 		board.addButton(upButton);
 		moveUpPress(trafficJam,upButton);
+		
+		createButton(upButtonColumn, upButtonRow + BUTTON_SIZE, BUTTON_SIZE, "stay put", carCode);
+		//middleButton = new JButton();
+		//middleButton.setBounds(upButtonColumn, upButtonRow + BUTTON_SIZE, BUTTON_SIZE, BUTTON_SIZE);
+		//middleButton.setText("stay put");
+		board.addButton(middleButton);
+		
+		
+		
 	}
 	
 	public void moveDown(int[][] trafficJam){
-		if(row-1>=0 && row+1<6 && trafficJam[row-1][column]==0){
-			trafficJam[row+1][column]=0;
-			row=row-1;
+		if(trafficJam[row+3][column] == 0){
+			trafficJam[row][column]=0;
+			trafficJam[row+1][column] = 0;
+			trafficJam[row+2][column] = 0;
+			row=row+1;
 			trafficJam[row][column]=carCode;
-			downButtonRow=downButtonRow-BUTTON_SIZE;
-			downButton.setBounds(downButtonColumn, downButtonRow, BUTTON_SIZE, BUTTON_SIZE);
-			upButton.setBounds(downButtonColumn, downButtonRow+BUTTON_SIZE, BUTTON_SIZE, BUTTON_SIZE);
+			trafficJam[row+1][column] = carCode;
+			trafficJam[row+2][column] = carCode;
+			upButtonRow+=BUTTON_SIZE;
+			downButton.setBounds(upButtonColumn,upButtonRow+2*BUTTON_SIZE, BUTTON_SIZE, BUTTON_SIZE);
+			upButton.setBounds(upButtonColumn, upButtonRow, BUTTON_SIZE, BUTTON_SIZE);
+			middleButton.setBounds(upButtonColumn, upButtonRow + BUTTON_SIZE, BUTTON_SIZE, BUTTON_SIZE);
 		}else{
 			System.out.println("moveup failed");
 		}
 	}
 	
 	public void moveUp(int[][] trafficJam){
-		if(row+2<6 && trafficJam[row+2][column]==0){
+		if(row>0 && trafficJam[row-1][column]==0){
 			trafficJam[row][column]=0;
-			row=row+1;
-			trafficJam[row+1][column]=carCode;
-			downButtonRow=downButtonRow+BUTTON_SIZE;
-			downButton.setBounds(downButtonColumn, downButtonRow, BUTTON_SIZE, BUTTON_SIZE);
-			upButton.setBounds(downButtonColumn, downButtonRow+BUTTON_SIZE, BUTTON_SIZE, BUTTON_SIZE);
+			trafficJam[row+1][column] = 0;
+			trafficJam[row+2][column] = 0;
+			row=row-1;
+			trafficJam[row][column]=carCode;
+			trafficJam[row+1][column] = carCode;
+			trafficJam[row+2][column] = carCode;
+			upButtonRow=upButtonRow-BUTTON_SIZE;
+			downButton.setBounds(upButtonColumn,upButtonRow+2*BUTTON_SIZE, BUTTON_SIZE, BUTTON_SIZE);
+			upButton.setBounds(upButtonColumn, upButtonRow, BUTTON_SIZE, BUTTON_SIZE);
+			middleButton.setBounds(upButtonColumn, upButtonRow + BUTTON_SIZE, BUTTON_SIZE, BUTTON_SIZE);
 		}else{
 			System.out.println("moveright failed");
 		}
