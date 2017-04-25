@@ -3,7 +3,7 @@ public class Level2 {
 
 	public static void main(String[] args) {
 		
-		player = (1,2 "horizontal");
+		player = (1,2, "horizontal");
 		
 		
 		2blockcar1 = (0,0, "vertical");
@@ -16,14 +16,14 @@ public class Level2 {
 		
 		2blockcar5 = (2,4, "vertical");
 		
-		2blockcar6 = (4,5 "horizontal");
+		2blockcar6 = (4,5, "horizontal");
 		
-		2blockcar7 = (5,4 "horizontal");
+		2blockcar7 = (5,4, "horizontal");
 		
 		
-		3blockcar1 = (5,0 "horizontal");
+		3blockcar1 = (5,0, "horizontal");
 		
-		3blockcar2 = (2,3 "horizontal");
+		3blockcar2 = (2,3, "horizontal");
 		
 		3blockcar3 = (5,1, "vertical");
 		
