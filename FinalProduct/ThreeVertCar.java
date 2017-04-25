@@ -8,7 +8,7 @@ import javax.swing.JButton;
 //convert everything here into a vertical car
 
 
-public class ThreeVertCar implements VertCar{
+public class ThreeVertCar extends HorzCar{
 
 	//hopefully condense car class into two: horz and vert
 	//when you instantiate a car, you need to add the buttons...
@@ -37,8 +37,9 @@ public class ThreeVertCar implements VertCar{
 		upButtonRow=row*BUTTON_SIZE;
 		upButtonColumn=column*BUTTON_SIZE;
 		trafficJam[row][column]=code;
-		trafficJam[row][column+1]=code;
-		}
+		trafficJam[row+1][column]=code;
+		trafficJam[row+2][column] = code;
+		
 		
 		//according to row column make image
 		//grab image from the place in hard drive
@@ -49,7 +50,7 @@ public class ThreeVertCar implements VertCar{
 		
 		
 		//according to row column make button
-		createButton(upButtonColumn,upButtonRow+2*BUTTON_SIZE, BUTTON_SIZE, "move down", carCode);
+		downButton = createButton(upButtonColumn,upButtonRow+2*BUTTON_SIZE, BUTTON_SIZE, "move down", carCode);
 		//downButton = new JButton();
 		//downButton.setBounds(upButtonColumn,upButtonRow+2*BUTTON_SIZE, BUTTON_SIZE, BUTTON_SIZE);
 		//downButton.setText("move down");
@@ -57,7 +58,7 @@ public class ThreeVertCar implements VertCar{
 		board.addButton(downButton);
 		moveDownPress(trafficJam,downButton);
 		
-		createButton(upButtonColumn, upButtonRow, BUTTON_SIZE, "move up", carCode);
+		upButton = createButton(upButtonColumn, upButtonRow, BUTTON_SIZE, "move up", carCode);
 		//upButton = new JButton();
 		//upButton.setBounds(upButtonColumn, upButtonRow, BUTTON_SIZE, BUTTON_SIZE);
 		//upButton.setText("move up");
@@ -65,13 +66,13 @@ public class ThreeVertCar implements VertCar{
 		board.addButton(upButton);
 		moveUpPress(trafficJam,upButton);
 		
-		createButton(upButtonColumn, upButtonRow + BUTTON_SIZE, BUTTON_SIZE, "stay put", carCode);
+		middleButton = createButton(upButtonColumn, upButtonRow + BUTTON_SIZE, BUTTON_SIZE, "stay put", carCode);
 		//middleButton = new JButton();
 		//middleButton.setBounds(upButtonColumn, upButtonRow + BUTTON_SIZE, BUTTON_SIZE, BUTTON_SIZE);
 		//middleButton.setText("stay put");
 		board.addButton(middleButton);
 		
-		
+		}	
 		
 	}
 	
@@ -84,12 +85,14 @@ public class ThreeVertCar implements VertCar{
 			trafficJam[row][column]=carCode;
 			trafficJam[row+1][column] = carCode;
 			trafficJam[row+2][column] = carCode;
-			upButtonRow+=BUTTON_SIZE;
-			downButton.setBounds(upButtonColumn,upButtonRow+2*BUTTON_SIZE, BUTTON_SIZE, BUTTON_SIZE);
+			upButtonRow = upButtonRow + BUTTON_SIZE;
 			upButton.setBounds(upButtonColumn, upButtonRow, BUTTON_SIZE, BUTTON_SIZE);
+			downButton.setBounds(upButtonColumn,upButtonRow+BUTTON_SIZE+BUTTON_SIZE, BUTTON_SIZE, BUTTON_SIZE);
 			middleButton.setBounds(upButtonColumn, upButtonRow + BUTTON_SIZE, BUTTON_SIZE, BUTTON_SIZE);
+			//moveDownPress(trafficJam,downButton);
+
 		}else{
-			System.out.println("moveup failed");
+			System.out.println("movedown failed");
 		}
 	}
 	
@@ -103,11 +106,14 @@ public class ThreeVertCar implements VertCar{
 			trafficJam[row+1][column] = carCode;
 			trafficJam[row+2][column] = carCode;
 			upButtonRow=upButtonRow-BUTTON_SIZE;
-			downButton.setBounds(upButtonColumn,upButtonRow+2*BUTTON_SIZE, BUTTON_SIZE, BUTTON_SIZE);
 			upButton.setBounds(upButtonColumn, upButtonRow, BUTTON_SIZE, BUTTON_SIZE);
+			downButton.setBounds(upButtonColumn,upButtonRow+(2*BUTTON_SIZE), BUTTON_SIZE, BUTTON_SIZE);
 			middleButton.setBounds(upButtonColumn, upButtonRow + BUTTON_SIZE, BUTTON_SIZE, BUTTON_SIZE);
+			//moveUpPress(trafficJam,upButton);
+//
+			
 		}else{
-			System.out.println("moveright failed");
+			System.out.println("moveup failed");
 		}
 	}
 	
@@ -169,10 +175,10 @@ public class ThreeVertCar implements VertCar{
 		return carCode;
 	}
 	public int getDownButtonRow(){
-		return downButtonRow;
+		return upButtonRow;
 	}
 	public int getDownButtonColumn(){
-		return downButtonColumn;
+		return upButtonColumn;
 	}
 	
 	
