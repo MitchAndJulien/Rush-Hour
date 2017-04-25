@@ -3,35 +3,35 @@ public class Level8 {
 
 	public static void main(String[] args) {
 		
-		player = (1,2, "horizontal");
+		ObjectiveCar player = new ObjectiveCar(2, 0, 0, trafficJam, srt);
 		
 		
-		2blockcar1 = (1,3, "horizontal");
+		TwoHorzCar car1 = new TwoHorzCar(3, 0, 0, trafficJam, srt);
 		
-		2blockcar2 = (1,4, "horizontal");
+		TwoHorzCar car2 = new TwoHorzCar(4, 0, 0, trafficJam, srt);
 		
-		2blockcar3 = (1,5, "horizontal");
+		TwoHorzCar car3 = new TwoHorzCar(5, 0, 0, trafficJam, srt);
 		
-		2blockcar4 = (3,1, "horizontal");
+		TwoHorzCar car4 = new TwoHorzCar(1, 2, 0, trafficJam, srt);
 		
-		2blockcar5 = (4,0, "horizontal");
+		TwoHorzCar car5 = new TwoHorzCar(0, 3, 0, trafficJam, srt);
 		
-		2blockcar6 = (5,3, "horizontal");
+		TwoHorzCar car6 = new TwoHorzCar(3, 4, 0, trafficJam, srt);
 		
-		2blockcar7 = (2,2, "vertical");
+		TwoVertCar car7 = new TwoVertCar(2, 2, 0, trafficJam, srt);
 		
-		2blockcar8 = (3,2, "vertical");
+		TwoVertCar car8 = new TwoVertCar(2, 3, 0, trafficJam, srt);
 		
-		2blockcar9 = (4,1, "vertical");
+		TwoVertCar car9 = new TwoVertCar(1, 4, 0, trafficJam, srt);
 		
-		2blockcar10 = (2,4, "vertical");
+		TwoVertCar car10 = new TwoVertCar(4, 2, 0, trafficJam, srt);
 		
 		
-		3blockcar1 = (5,0, "vertical");
+		ThreeVertCar car11 = new ThreeVertCar(0, 5, 0, trafficJam, srt);
 		
-		3blockcar2 = (5,4, "horizontal");
+		ThreeHorzCar car12 = new ThreeHorzCar(4, 3, 0, trafficJam, srt);
 		
-		3blockcar3 = (5,5, "horizontal");
+		ThreeHorzCar car13 = new ThreeHorzCar(5, 3, 0, trafficJam, srt);
 		
 	}
 }
