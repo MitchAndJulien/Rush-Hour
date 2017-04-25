@@ -3,32 +3,23 @@ public class Level1 {
 
 	public static void main(String[] args) {
 		
-		// horizontal
-		player = (2,2);
+		player = (2,2, "horizontal");
 		
 		
-		// horizontal
-		2blockcar1 = (1,0);
+		2blockcar1 = (1,0, "horizontal");
 		
-		// horizontal
-		2blockcar2 = (5,4);
+		2blockcar2 = (5,4, "horizontal");
 		
-		// vertical
-		2blockcar3 = (0,4);
+		2blockcar3 = (0,4, "vertical");
 		
 		
-		// vertical
-		3blockcar1 = (0,1);
+		3blockcar1 = (0,1, "vertical");
 		
-		// vertical
-		3blockcar2 = (5,0);
+		3blockcar2 = (5,0, "vertical");
 		
-		// vertical
-		3blockcar3 = (3,1);
+		3blockcar3 = (3,1, "vertical");
 		
-		// horizontal
-		3blockcar3 = (4,5);
-
+		3blockcar4 = (4,5, "horizontal");
+		
 	}
-
 }
