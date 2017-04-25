@@ -3,29 +3,29 @@ public class Level2 {
 
 	public static void main(String[] args) {
 		
-		player = (1,2, "horizontal");
+		ObjectiveCar player = new ObjectiveCar(2, 0, 0, trafficJam, srt);
 		
 		
-		2blockcar1 = (0,0, "vertical");
+		TwoVertCar car1 = new TwoVertCar(0, 0, 0, trafficJam, srt);
 		
-		2blockcar2 = (3,1, "vertical");
+		TwoVertCar car2 = new TwoVertCar(1, 3, 0, trafficJam, srt);
 		
-		2blockcar3 = (4,2, "vertical");
+		TwoVertCar car3 = new TwoVertCar(2, 4, 0, trafficJam, srt);
 		
-		2blockcar4 = (1,5, "horizontal");
+		TwoHorzCar car4 = new TwoHorzCar(5, 0, 0, trafficJam, srt);
 		
-		2blockcar5 = (2,4, "vertical");
+		TwoVertCar car5 = new TwoVertCar(4, 2, 0, trafficJam, srt);
 		
-		2blockcar6 = (4,5, "horizontal");
+		TwoHorzCar car6 = new TwoHorzCar(5, 3, 0, trafficJam, srt);
 		
-		2blockcar7 = (5,4, "horizontal");
+		TwoHorzCar car7 = new TwoHorzCar(4, 4, 0, trafficJam, srt);
 		
 		
-		3blockcar1 = (5,0, "horizontal");
+		ThreeHorzCar car8 = new ThreeHorzCar(0, 3, 0, trafficJam, srt);
 		
-		3blockcar2 = (2,3, "horizontal");
+		ThreeHorzCar car9 = new ThreeHorzCar(3, 0, 0, trafficJam, srt);
 		
-		3blockcar3 = (5,1, "vertical");
+		ThreeVertCar car10 = new ThreeVertCar(1, 5, 0, trafficJam, srt);
 		
 	}
 }
