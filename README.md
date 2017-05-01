@@ -15,6 +15,9 @@ Mitch: Levels
 The In-Development:
 Julien: Sliding
 Anderson: Start Menu
-Mitch: Levels
+Mitch: Powerpoint
 
-Last Updated: 1 May 2017 13:47 EST
+Final Notes:
+Developing the classes, there must be JavaDoc
+
+Last Updated: 1 May 2017 14:44 EST
