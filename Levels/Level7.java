@@ -3,6 +3,11 @@ public class Level7 {
 
 	public static void main(String[] args) {
 		
+		int[][] trafficJam = new int[6][6];
+		
+		Board srt = new Board();
+		
+		
 		ObjectiveCar player = new ObjectiveCar(2, 1, 1, trafficJam, srt);
 		
 		
