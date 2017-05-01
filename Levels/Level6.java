@@ -8,7 +8,7 @@ public class Level6 {
 		Board srt = new Board();
 		
 		
-		ObjectiveCar player = new ObjectiveCar(2, 1, 1, trafficJam, srt);
+		ObjectiveCar car0 = new ObjectiveCar(2, 1, 1, trafficJam, srt);
 		
 		
 		TwoHorzCar car1 = new TwoHorzCar(0, 0, 2, trafficJam, srt);
@@ -31,6 +31,11 @@ public class Level6 {
 		ThreeVertCar car9 = new ThreeVertCar(1, 5, 10, trafficJam, srt);
 		
 		ThreeHorzCar car10 = new ThreeHorzCar(5, 3, 2, trafficJam, srt);
+		
+		
+		srt.createBackground(srt);
+		
+		car0.finished(trafficJam,car0);
 		
 	}
 }
