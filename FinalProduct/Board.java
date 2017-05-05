@@ -53,5 +53,6 @@ public class Board extends InternetJButtonColor{
 				board.addButton(b);
 			}
 		}
+		level.repaint();
 	}
 }
