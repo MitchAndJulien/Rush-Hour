@@ -19,6 +19,10 @@ public class Board extends InternetJButtonColor{
 
 	private JFrame level;
 	
+	
+	/**
+	Creates the JFrame window
+	**/
 	public Board(){
 		level=new JFrame();
 		level.setSize(1300,1000);
