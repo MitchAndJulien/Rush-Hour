@@ -29,14 +29,14 @@ public class Level8 {
 		
 		TwoVertCar car9 = new TwoVertCar(1, 4, 10, trafficJam, srt);
 		
-		TwoVertCar car10 = new TwoVertCar(4, 2, 2, trafficJam, srt);
+		TwoVertCar car10 = new TwoVertCar(4, 2, 11, trafficJam, srt);
 		
 		
-		ThreeVertCar car11 = new ThreeVertCar(0, 5, 3, trafficJam, srt);
+		ThreeVertCar car11 = new ThreeVertCar(0, 5, 2, trafficJam, srt);
 		
-		ThreeHorzCar car12 = new ThreeHorzCar(4, 3, 4, trafficJam, srt);
+		ThreeHorzCar car12 = new ThreeHorzCar(4, 3, 3, trafficJam, srt);
 		
-		ThreeHorzCar car13 = new ThreeHorzCar(5, 3, 5, trafficJam, srt);
+		ThreeHorzCar car13 = new ThreeHorzCar(5, 3, 4, trafficJam, srt);
 		
 		
 		srt.createBackground(srt);
