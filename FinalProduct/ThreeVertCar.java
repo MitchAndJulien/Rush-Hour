@@ -76,6 +76,10 @@ public class ThreeVertCar extends HorzCar{
 		
 	}
 	
+	
+	/**
+	Moves the car down
+	**/
 	public void moveDown(int[][] trafficJam){
 		if(trafficJam[row+3][column] == 0){
 			trafficJam[row][column]=0;
@@ -96,6 +100,10 @@ public class ThreeVertCar extends HorzCar{
 		}
 	}
 	
+	
+	/**
+	Moves the car up
+	**/
 	public void moveUp(int[][] trafficJam){
 		if(row>0 && trafficJam[row-1][column]==0){
 			trafficJam[row][column]=0;
@@ -117,6 +125,10 @@ public class ThreeVertCar extends HorzCar{
 		}
 	}
 	
+	
+	/**
+	Mouse listener to move the car down
+	**/
 	public void moveDownPress(int[][] trafficJam, JButton b){
 		b.addMouseListener(
 				new MouseListener(){
@@ -140,6 +152,10 @@ public class ThreeVertCar extends HorzCar{
 		);
 	}
 	
+	
+	/**
+	Mouse listener to move the car up
+	**/
 	public void moveUpPress(int[][] trafficJam,JButton b){
 		b.addMouseListener(
 				new MouseListener(){
