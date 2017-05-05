@@ -48,6 +48,8 @@ public class HorzCar{
 			b.setBackground(Color.black);
 		}else if(code==10){
 			b.setBackground(Color.red);
+		}else if(code==11){
+			b.setBackground(Color.gray);
 		}
 	}
 	
