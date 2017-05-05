@@ -65,6 +65,10 @@ public class TwoVertCar extends VertCar{
 		moveUpPress(trafficJam,upButton);*/
 	}
 	
+	
+	/**
+	Moves the car down
+	**/
 	public void moveDown(int[][] trafficJam){
 		if(row<4 && trafficJam[row+2][column]==0){
 			trafficJam[row][column]=0;
@@ -80,6 +84,10 @@ public class TwoVertCar extends VertCar{
 		}
 	}
 	
+	
+	/**
+	Moves the car up
+	**/
 	public void moveUp(int[][] trafficJam){
 		if(row>0 && trafficJam[row-1][column]==0){
 			trafficJam[row][column]=0; 
@@ -96,6 +104,10 @@ public class TwoVertCar extends VertCar{
 		}
 	}
 	
+	
+	/**
+	Mouse listener to move the car down
+	**/
 	public void moveDownPress(int[][] trafficJam, JButton b){
 		b.addMouseListener(
 				new MouseListener(){
@@ -119,6 +131,10 @@ public class TwoVertCar extends VertCar{
 		);
 	}
 	
+	
+	/**
+	Mouse listener to move the car up
+	**/
 	public void moveUpPress(int[][] trafficJam,JButton b){
 		b.addMouseListener(
 				new MouseListener(){
