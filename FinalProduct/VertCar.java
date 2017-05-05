@@ -16,6 +16,10 @@ public class VertCar {
 	protected final int BUTTON_SIZE=150;
 	protected int lengthCode;
 	
+	
+	/**
+	Chooses a color for the car
+	**/
 	public void createColor(JButton b, int code){
 		if(code==1){
 			b.setBackground(Color.WHITE);
@@ -40,6 +44,10 @@ public class VertCar {
 		}
 	}
 	
+	
+	/**
+	Creates the button
+	**/
 	public JButton createButton(int upButtonColumn, int upButtonRow, int BUTTON_SIZE, String str, int code){
 		JButton b=new JButton();
 		b.setBounds(upButtonColumn, upButtonRow, BUTTON_SIZE, BUTTON_SIZE);
