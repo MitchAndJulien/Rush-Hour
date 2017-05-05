@@ -25,7 +25,7 @@ public class Board extends InternetJButtonColor{
 	**/
 	public Board(){
 		level=new JFrame();
-		level.setSize(1300,1000);
+		level.setSize(915,935);
 		level.setLayout(null);
 		//level.setBackground(arg0);
 		//level.setState(JFrame.NORMAL);
