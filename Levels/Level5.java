@@ -30,7 +30,7 @@ public class Level5 {
 		
 		ThreeVertCar car9 = new ThreeVertCar(0, 3, 10, trafficJam, srt);
 		
-		ThreeVertCar car10 = new ThreeVertCar(1, 4, 2, trafficJam, srt);
+		ThreeVertCar car10 = new ThreeVertCar(1, 4, 11, trafficJam, srt);
 		
 		
 		srt.createBackground(srt);
