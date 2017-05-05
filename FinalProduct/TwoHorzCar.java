@@ -31,6 +31,10 @@ public class TwoHorzCar extends HorzCar{
 		}
 	}
 	
+	
+	/**
+	Moves the car left
+	**/
 	public void moveLeft(int[][] trafficJam){
 		if(column-1>=0 && column+1<6 && trafficJam[row][column-1]==0){
 			trafficJam[row][column+1]=0;
@@ -48,6 +52,10 @@ public class TwoHorzCar extends HorzCar{
 		}
 	}
 	
+	
+	/**
+	Moves the car right
+	**/
 	public void moveRight(int[][] trafficJam){
 		if(column+2<6 && trafficJam[row][column+2]==0){
 			trafficJam[row][column]=0;
@@ -66,6 +74,10 @@ public class TwoHorzCar extends HorzCar{
 		}
 	}
 	
+	
+	/**
+	Mouse listener to move the car left
+	**/
 	public void moveLeftPress(int[][] trafficJam, JButton b){
 		b.addMouseListener(
 				new MouseListener(){
@@ -88,6 +100,10 @@ public class TwoHorzCar extends HorzCar{
 		);
 	}
 	
+	
+	/**
+	Mouse listener to move the car right
+	**/
 	public void moveRightPress(int[][] trafficJam,JButton b){
 		b.addMouseListener(
 				new MouseListener(){
