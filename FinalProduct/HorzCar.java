@@ -22,7 +22,11 @@ public class HorzCar{
 	protected int leftButtonColumn;
 	protected final int BUTTON_SIZE=150;
 	protected int lengthCode;
-				
+	
+	
+	/**
+	Chooses a color for the car
+	**/
 	public void createColor(JButton b, int code){
 		if(code==1){
 			b.setBackground(Color.WHITE);
@@ -47,6 +51,10 @@ public class HorzCar{
 		}
 	}
 	
+	
+	/**
+	Creates the button
+	**/
 	public JButton createButton(int leftButtonColumn, int leftButtonRow, int BUTTON_SIZE, String str, int code){
 		JButton b=new JButton();
 		b.setBounds(leftButtonColumn, leftButtonRow, BUTTON_SIZE, BUTTON_SIZE);
