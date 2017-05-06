@@ -1,0 +1,22 @@
+
+Hi guys,
+
+The files I uploaded onto this folder still need some work. Here are some comments:
+
+1. I have javadoced everything on these files so far.
+
+2. The only problem I have yet to fix is the createbackground() method. From our originial board class, I have realized that 
+this method needs to be called after everything has been instantiated, but it still would not work when I tried that. If you 
+download the code and run it, you will know what I mean when I say it does not work.
+
+3. The background problem aside, the most important task now is to add the cars to the levels. I do not know how we want to do 
+this, but there are many options that we have. One though that came to mind for me was to have a class called levelmaker
+that extends the RushHourBoard class, wherewe have 10 methods, 1 for each level. Inside each of those methods, we would 
+instantiate car objects for each level individually. The levelmaker constructor would call all 10 of these methods. 
+Then, in the RushHourBoard class, we could create a levelmaker object, that would automatically call all 10 of these methods
+to set up all the levels correctly. 
+
+
+
+
+
