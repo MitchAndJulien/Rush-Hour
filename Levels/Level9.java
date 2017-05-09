@@ -21,7 +21,7 @@ public class Level9 {
 		
 		TwoVertCar car5 = new TwoVertCar(1, 3, 6, trafficJam, srt);
 		
-		TwoVertCar car6 = new TwoVertCar(1, 5, 7, trafficJam, srt);
+		TwoVertCar car6 = new TwoVertCar(2, 5, 7, trafficJam, srt);
 		
 		TwoVertCar car7 = new TwoVertCar(4, 5, 8, trafficJam, srt);
 		
