@@ -20,16 +20,54 @@ import javax.swing.JFrame;
 
 public class Board extends InternetJButtonColor{
 
+	/**
+	 * 
+	 */
 	private JFrame level;
+	
+	/**
+	 * 
+	 */
 	private JFrame easygame;
+	
+	/**
+	 * 
+	 */
 	private JFrame mediumgame;
+	
+	/**
+	 * 
+	 */
 	private JFrame hardgame;
+	
+	/**
+	 * 
+	 */
 	private JFrame startscreen;
+	
+	/**
+	 * 
+	 */
 	private JButton RushHour;
+	
+	/**
+	 * 
+	 */
 	private JButton easy;
+	
+	/**
+	 * 
+	 */
 	private JButton medium;
+	
+	/**
+	 * 
+	 */
 	private JButton hard;
 	
+	/**
+	 * 
+	 */
 	public Board(){
 		level=new JFrame();
 		level.setSize(1300,1000);
@@ -151,25 +189,11 @@ public class Board extends InternetJButtonColor{
 		rushhour.setOpaque(true);
 		rushhour.setBackground(Color.CYAN);
 		startscreen.add(rushhour);
-		
-		
-		//failed to add an image :(
-		/*
-		 JButton button = new JButton();
-		  try {
-		    Image img = ImageIO.read(getClass().getResource("images\\rushhour2.png"));
-		    button.setIcon(new ImageIcon(img));
-		  } catch (IOException ex) {
-		    System.out.println(ex);
-		  }
-		//image.setBounds(520, 250, 200,200);
-		  button.setBounds(100,100,100,100);
-		startscreen.add(button);
-		*/
-		
-		
 	}
 	
+	/**
+	 * 
+	 */
 	public void returntomenu(){
 		JButton easyreturn = new JButton("Return to Menu");
 		easyreturn.setBounds(1050, 600, 150, 100);
@@ -248,26 +272,44 @@ public class Board extends InternetJButtonColor{
 		
 	}
 	
+	/**
+	 * 
+	 */
 	public void addButton(JButton b){
 		level.add(b);
 	}
 	
+	/**
+	 * 
+	 */
 	public void addeasyButton(JButton b){
 		easygame.add(b);
 	}
 	
+	/**
+	 * 
+	 */
 	public void addmediumButton(JButton b){
 		mediumgame.add(b);
 	}
 	
+	/**
+	 * 
+	 */
 	public void addhardButton(JButton b){
 		hardgame.add(b);
 	}
 
+	/**
+	 * 
+	 */
 	public JFrame getLevel(){
 		return level;
 	}
 	
+	/**
+	 * 
+	 */
 	public void createBackground(Board board){
 		
 		for(int side1=0;side1<=5;side1++){
