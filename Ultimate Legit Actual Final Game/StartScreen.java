@@ -3,7 +3,11 @@ import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-
+/**
+ * Class that makes StartScreens for the game
+ * @author Anderson
+ *
+ */
 public class StartScreen {
 	
 	/**
