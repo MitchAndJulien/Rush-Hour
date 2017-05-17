@@ -1,11 +1,15 @@
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
+/**
+ * The actual game where the player solves the rush hour puzzle
+ * @author julienzhu
+ *
+ */
 public class Level extends InternetJButtonColor {
 
 	/**
@@ -18,10 +22,19 @@ public class Level extends InternetJButtonColor {
 	 */
 	private JButton returnhome;
 
+	/**
+	 * The size of the button
+	 */
 	protected final int BUTTON_SIZE=150;
 	
+	/**
+	 * The car that needs to be placed at the exit (the left side of the screen)
+	 */
 	private ObjectiveCar obj;
 	
+	/**
+	 * True if the player has won; False otherwise
+	 */
 	private boolean hasWon;
 
 	/**
@@ -46,7 +59,7 @@ public class Level extends InternetJButtonColor {
 	}
 
 	/**
-	 * creates the background of gray squares for each level JFrame
+	 * Creates the background of gray squares for each level JFrame
 	 */
 	public void createBackground() {
 		for (int side1 = 0; side1 <= 5; side1++) {
@@ -67,24 +80,17 @@ public class Level extends InternetJButtonColor {
 		level.add(b);
 		level.repaint();
 	}
-
+	
 	/**
-	 * Getter for the level
-	 * 
-	 * @return JFrame corresponding to the level
+	 * Getter for the JFrame of the level
+	 * @return The JFrame of the level
 	 */
-	
-	private void test(int side1, int side2){
-			
-	}
-	
 	public JFrame getLevel() {
 		return this.level;
 	}
 
 	/**
 	 * Getter for the return home button
-	 * 
 	 * @return JButton for the return home on that level
 	 */
 	public JButton getreturnhome() {
@@ -93,28 +99,42 @@ public class Level extends InternetJButtonColor {
 
 	/**
 	 * Setter for visibility of the JFrame of the level
-	 * 
 	 * @param a
 	 *            If a is set to false, JFrame will be set to not visible. If a
 	 *            is set to true, JFrame will be set to visible
-	 * 
 	 */
 	public void setlevelvisible(boolean a) {
 		this.level.setVisible(a);
 	}
 	
+	/**
+	 * Sets the instance variable as the ObjectiveCar
+	 * @param The objective car
+	 */
 	public void obj(ObjectiveCar a){
 		this.obj = a;
 	}
 	
+	/**
+	 * Getter for the ObjectiveCar
+	 * @return The ObjectiveCar
+	 */
 	public ObjectiveCar getobj(){
 		return this.obj;
 	}
 	
+	/**
+	 * Getter for the hasWon boolean
+	 * @return True if player has won; False otherwise
+	 */
 	public boolean hasWon(){
 		return this.hasWon;
 	}
 	
+	/**
+	 * Setter for the hasWon boolean
+	 * @param Boolean of whether the player has won or not
+	 */
 	public void sethasWon(boolean a){
 		this.hasWon = a;
 	}
