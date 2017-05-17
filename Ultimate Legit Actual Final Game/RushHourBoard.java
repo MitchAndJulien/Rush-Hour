@@ -8,7 +8,11 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-
+/**
+ * Used for the construction of one of ten levels preconstructed
+ * @author julienzhu
+ *
+ */
 public class RushHourBoard extends InternetJButtonColor{
 	
 	/**
@@ -53,15 +57,10 @@ public class RushHourBoard extends InternetJButtonColor{
 			);
 			
 		}
-		
-		
 		start.getPlayNow().addMouseListener(new MouseListener(){
 
 			@Override
-			public void mouseClicked(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
+			public void mouseClicked(MouseEvent e) {}
 
 			@Override
 			public void mousePressed(MouseEvent e) {
@@ -73,28 +72,17 @@ public class RushHourBoard extends InternetJButtonColor{
 					levels[i].setlevelvisible(true);
 					break;
 					}
-				}
-				
+				}	
 			}
 
 			@Override
-			public void mouseReleased(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
+			public void mouseReleased(MouseEvent e) {}
 
 			@Override
-			public void mouseEntered(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
+			public void mouseEntered(MouseEvent e) {}
 
 			@Override
-			public void mouseExited(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
+			public void mouseExited(MouseEvent e) {}	
 		});
 		
 		level0();
@@ -114,45 +102,27 @@ public class RushHourBoard extends InternetJButtonColor{
 		youwin.winbutton().addMouseListener(new MouseListener(){
 
 			@Override
-			public void mouseClicked(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
+			public void mouseClicked(MouseEvent e) {}
 
 			@Override
 			public void mousePressed(MouseEvent e) {
-				//System.exit(0);
 				youwin.setVisible(false);
 				start.setstartvisibility(true);
-				
 			}
 
 			@Override
-			public void mouseReleased(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
+			public void mouseReleased(MouseEvent e) {}
 
 			@Override
-			public void mouseEntered(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
+			public void mouseEntered(MouseEvent e) {}
 
 			@Override
-			public void mouseExited(MouseEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
+			public void mouseExited(MouseEvent e) {}
 		});
 		
 		for(int i = 0; i < 10; i ++){
 			checkWin();
 		}
-		
-		
-		
 	}
 	
 	
@@ -175,31 +145,34 @@ public class RushHourBoard extends InternetJButtonColor{
 		for(int side1=0;side1<=5;side1++){
 			for(int side2=0;side2<=5;side2++){		
 				MyButton b=new MyButton("");
-				
 				setColorWheel(b);
-				
 				b.setBounds(150*side1, 150*side2, 150, 150);
-				
 				b.setBorder(BorderFactory.createLoweredBevelBorder());
-
 				b.setBackground(Color.lightGray);
-				
 				level.getLevel().add(b);
-				
 			}
 		}
+		MyButton b=new MyButton("");
+		setColorWheel(b);
+		b.setBounds(150*5, 150*5, 150, 150);
+		b.setBorder(BorderFactory.createLoweredBevelBorder());
+		b.setBackground(Color.lightGray);
+		level.getLevel().add(b);
 		level.getLevel().repaint();
 	}
 	
 	/**
 	 * Getter for a level at index i in the levels array
-	 * @param i
-	 * @return
+	 * @param i Which index to extract the level
+	 * @return The level
 	 */
 	public Level getlevelsfromarray(int i){
 		return levels[i];
 	}	
 	
+	/**
+	 * Level 0
+	 */
 	public void level0(){
 		Level l = getlevelsfromarray(0);
 		int[][] a = new int[6][6];
@@ -212,8 +185,11 @@ public class RushHourBoard extends InternetJButtonColor{
 		ThreeVertCar car5 = new ThreeVertCar(0, 5, 6, jams.get(0), l);
 		ThreeVertCar car6 = new ThreeVertCar(1, 3, 7, jams.get(0), l);
 		ThreeHorzCar car7 = new ThreeHorzCar(5, 2, 8, jams.get(0), l);
-			}
+	}
 	
+	/**
+	 * Level 1
+	 */
 	public void level1(){
 		Level l = getlevelsfromarray(1);
 		int[][] a = new int[6][6];
@@ -231,6 +207,9 @@ public class RushHourBoard extends InternetJButtonColor{
 		ThreeVertCar car10 = new ThreeVertCar(1, 5, 11, jams.get(1), l);
 	}
 	
+	/**
+	 * Level 2
+	 */
 	public void level2(){
 		Level l = getlevelsfromarray(2);
 		int[][] a = new int[6][6];
@@ -243,6 +222,9 @@ public class RushHourBoard extends InternetJButtonColor{
 		ThreeVertCar car5 = new ThreeVertCar(3, 5, 6, jams.get(2), l);
 	}
 	
+	/**
+	 * Level 3
+	 */
 	public void level3(){
 		Level l = getlevelsfromarray(3);
 		int[][] a = new int[6][6];
@@ -257,6 +239,9 @@ public class RushHourBoard extends InternetJButtonColor{
 		ThreeHorzCar car6 = new ThreeHorzCar(5, 2, 7, jams.get(3), l);
 	}
 	
+	/**
+	 * Level 4
+	 */
 	public void level4(){
 		Level l = getlevelsfromarray(4);
 		int[][] a = new int[6][6];
@@ -276,6 +261,9 @@ public class RushHourBoard extends InternetJButtonColor{
 		
 	}
 	
+	/**
+	 * Level 5
+	 */
 	public void level5(){
 		Level l = getlevelsfromarray(5);
 		int[][] a = new int[6][6];
@@ -294,6 +282,9 @@ public class RushHourBoard extends InternetJButtonColor{
 		ThreeHorzCar car10 = new ThreeHorzCar(5, 3, 11, jams.get(5), l);
 	}
 	
+	/**
+	 * Level 6
+	 */
 	public void level6(){
 		Level l = getlevelsfromarray(6);
 		int[][] a = new int[6][6];
@@ -310,6 +301,9 @@ public class RushHourBoard extends InternetJButtonColor{
 		TwoVertCar car8 = new TwoVertCar(4, 3, 9, jams.get(6), l);
 	}
 	
+	/**
+	 * Level 7
+	 */
 	public void level7(){
 		Level l = getlevelsfromarray(7);
 		int[][] a = new int[6][6];
@@ -331,6 +325,9 @@ public class RushHourBoard extends InternetJButtonColor{
 		ThreeHorzCar car13 = new ThreeHorzCar(5, 3, 4, jams.get(7), l);
 	}
 	
+	/**
+	 * Level 8
+	 */
 	public void level8(){
 		Level l = getlevelsfromarray(8);
 		int[][] a = new int[6][6];
@@ -349,6 +346,9 @@ public class RushHourBoard extends InternetJButtonColor{
 		ThreeVertCar car10 = new ThreeVertCar(2, 4, 11, jams.get(8), l);
 	}
 	
+	/**
+	 * Level 9
+	 */
 	public void level9(){
 		Level l = getlevelsfromarray(9);
 		int[][] a = new int[6][6];
@@ -368,9 +368,11 @@ public class RushHourBoard extends InternetJButtonColor{
 		ThreeHorzCar car11 = new ThreeHorzCar(3, 1, 2, jams.get(9), l);
 	}
 	
+	/**
+	 * Continually checks if player has won game
+	 */
 	public void checkWin(){
-		
-		while (true){
+		while(true){
 			for (int i = 0; i < levels.length; i ++){
 				if(levels[i].hasWon() == false){
 				if (levels[i].getobj().getCol() == 4){
