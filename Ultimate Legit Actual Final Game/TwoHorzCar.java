@@ -5,6 +5,11 @@ import java.util.Arrays;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 
+/**
+ * Sets up a horizontal car of 2 buttons
+ * @author Anderson
+ *
+ */
 public class TwoHorzCar extends HorzCar{
 	
 	/**
