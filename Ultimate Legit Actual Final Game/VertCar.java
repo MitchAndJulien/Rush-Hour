@@ -3,7 +3,11 @@ import java.awt.Font;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
-
+/**
+ * Parent class for all vertical cars
+ * @author Anderson
+ *
+ */
 public class VertCar{
 
 	/**
