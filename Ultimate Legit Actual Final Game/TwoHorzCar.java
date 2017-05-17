@@ -6,9 +6,15 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 
 public class TwoHorzCar extends HorzCar{
-	private int level;
 	
-	//code represents the artwork that should be displayed...
+	/**
+	 * Constructor that sets up a horizontal car of two buttons
+	 * @param row the row of the car in the integer array
+	 * @param column the column of the car's move left button in the integer array
+	 * @param code integer that determines the car's color
+	 * @param trafficJam integer array representing positions of cars
+	 * @param level the level that the car will be added to
+	 */
 	public TwoHorzCar(int row, int column, int code, int[][] trafficJam, Level level){
 		//Left side is primary side
 		if(row>=6 || column>=5){
@@ -35,6 +41,10 @@ public class TwoHorzCar extends HorzCar{
 		}
 	}
 	
+	/**
+	 * Moves the car's buttons one space to the left
+	 * @param trafficJam integer array that determines if the move left is legal
+	 */
 	public void moveLeft(int[][] trafficJam){
 		if(column-1>=0 && column+1<6 && trafficJam[row][column-1]==0){
 			trafficJam[row][column+1]=0;
@@ -52,6 +62,10 @@ public class TwoHorzCar extends HorzCar{
 		}
 	}
 	
+	/**
+	 * Moves the car's buttons one space to the right
+	 * @param trafficJam integer array that determines if the move right is legal
+	 */
 	public void moveRight(int[][] trafficJam){
 		if(column+2<6 && trafficJam[row][column+2]==0){
 			trafficJam[row][column]=0;
@@ -70,6 +84,11 @@ public class TwoHorzCar extends HorzCar{
 		}
 	}
 	
+	/**
+	 * Adds a mouseListener to the move left button
+	 * @param trafficJam integer array showing car positions
+	 * @param b the button the mouse listener will be added to
+	 */
 	public void moveLeftPress(int[][] trafficJam, JButton b){
 		b.addMouseListener(
 				new MouseListener(){
@@ -92,6 +111,11 @@ public class TwoHorzCar extends HorzCar{
 		);
 	}
 	
+	/**
+	 * Adds a mouseListener to the move right button
+	 * @param trafficJam integer array showing car positions
+	 * @param b the button the mouse listener will be added to
+	 */
 	public void moveRightPress(int[][] trafficJam,JButton b){
 		b.addMouseListener(
 				new MouseListener(){
@@ -114,6 +138,10 @@ public class TwoHorzCar extends HorzCar{
 		);
 	}
 	
+	/**
+	 * getter for the column of the car's left button
+	 * @return column of car's left button
+	 */
 	public int getCol(){
 		return this.column;
 	}
