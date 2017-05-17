@@ -3,7 +3,11 @@ import java.awt.Image;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-
+/**
+ * Sets up the button in the WinScreen that returns the user to the menu
+ * @author Anderson
+ *
+ */
 public class WinLogoButton extends JButton{
 	
 	/**
