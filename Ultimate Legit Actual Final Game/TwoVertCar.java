@@ -11,12 +11,16 @@ import javax.swing.JButton;
 public class TwoVertCar extends VertCar{
 
 
-	//when you instantiate a car, you need to add the buttons...
-	//prob need vert and horz interfaces...
-	
-	//code represents the artwork that should be displayed...
 	
 	
+	/**
+	 * Constructor that sets up the car's position, buttons, and which level it goes in
+	 * @param row the row of the car's top button in the array
+	 * @param column the column of the car's top button in the array
+	 * @param code the number corresponding to the car's color
+	 * @param trafficJam the integer array that represents the cars' positions
+	 * @param level the desired level that this car will be in
+	 */
 	public TwoVertCar(int row, int column, int code, int[][] trafficJam, Level level){
 		//Bottom side is primary side
 		if(row>=5 || column>5){
@@ -43,30 +47,13 @@ public class TwoVertCar extends VertCar{
 		
 		System.out.println("Two vert car successfully instantiated");
 		
-		//according to row column make image
-		//grab image from the place in hard drive
-		//place image at buttonRow, buttonColumn
 		
-		//or just have the buttons be the interface...
-		//:)
-		
-		
-		//according to row column make button
-		/*downButton = new JButton();
-		downButton.setBounds(upButtonColumn, upButtonRow, BUTTON_SIZE, BUTTON_SIZE);
-		downButton.setText("move up");
-		downButton.setBorder(BorderFactory.createRaisedBevelBorder());
-		board.addButton(downButton);
-		moveDownPress(trafficJam,downButton);
-		
-		upButton = new JButton();
-		upButton.setBounds(upButtonColumn, upButtonRow+BUTTON_SIZE, BUTTON_SIZE, BUTTON_SIZE);
-		upButton.setText("move down");
-		upButton.setBorder(BorderFactory.createRaisedBevelBorder());
-		board.addButton(upButton);
-		moveUpPress(trafficJam,upButton);*/
 	}
 	
+	/**
+	 * Moves the car's buttons down one space and updates the integer array
+	 * @param trafficJam the integer array representing cars to see if a move is valid or not
+	 */
 	public void moveDown(int[][] trafficJam){
 		if(row<4 && trafficJam[row+2][column]==0){
 			trafficJam[row][column]=0;
@@ -82,6 +69,10 @@ public class TwoVertCar extends VertCar{
 		}
 	}
 	
+	/**
+	 * Moves the car's buttons up one space and updates the integer array
+	 * @param trafficJam the integer array representing cars to see if a move is valid or not
+	 */
 	public void moveUp(int[][] trafficJam){
 		if(row>0 && trafficJam[row-1][column]==0){
 			trafficJam[row][column]=0; 
@@ -98,6 +89,11 @@ public class TwoVertCar extends VertCar{
 		}
 	}
 	
+	/**
+	 * Adds a mouseListener to the move down button
+	 * @param trafficJam the integer array that represents car positions
+	 * @param b the down button that the mouse listener will be added to
+	 */
 	public void moveDownPress(int[][] trafficJam, JButton b){
 		b.addMouseListener(
 				new MouseListener(){
@@ -120,6 +116,11 @@ public class TwoVertCar extends VertCar{
 		);
 	}
 	
+	/**
+	 * Adds a mouseListener to the move up button
+	 * @param trafficJam the integer array that represents car positions
+	 * @param b the up button that the mouse listener will be added to
+	 */
 	public void moveUpPress(int[][] trafficJam,JButton b){
 		b.addMouseListener(
 				new MouseListener(){
@@ -144,18 +145,42 @@ public class TwoVertCar extends VertCar{
 	
 
 	//getters
+	/**
+	 * A getter for the row of the car in the integer array
+	 * @return row of the car
+	 */
 	public int getRow(){
 		return row;
 	}
+	
+	/**
+	 * A getter for the column of the car in the integer array
+	 * @return column of the car
+	 */
 	public int getColumn(){
 		return column;
 	}
+	
+	/**
+	 * A getter for the code of the car 
+	 * @return code of the car
+	 */
 	public int getCarCode(){
 		return carCode;
 	}
+	
+	/**
+	 * A getter for the row position of the car's top button in the JFrame
+	 * @return button row of the car
+	 */
 	public int getupButtonRow(){
 		return upButtonRow;
 	}
+	
+	/**
+	 * A getter for the column position of the car's top button in the JFrame
+	 * @return button column of the car
+	 */
 	public int getupButtonColumn(){
 		return upButtonColumn;
 	}
