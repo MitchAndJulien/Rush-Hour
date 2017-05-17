@@ -9,10 +9,19 @@ import javax.swing.JButton;
 public class ThreeHorzCar extends HorzCar{
 
 	//differences, movement has an extra step and now there is a third button
-	
+	/**
+	 * A JButton representing the car's middle button
+	 */
 	private JButton middleButton;
 	
-	
+	/**
+	 * Constructor setting up the car's position and buttons in a level
+	 * @param row The car's row in the integer array
+	 * @param column The car's column in the integer array
+	 * @param code The car's code that represents its color
+	 * @param trafficJam Integer array that represents the cars' positions
+	 * @param level The level that the car will be added to
+	 */
 	public ThreeHorzCar(int row, int column, int code, int[][] trafficJam, Level level){
 		if(row>=6 || column>=4){
 			System.out.println("Inputted ThreeHorzCar is not in bounds of 6x6");
@@ -46,7 +55,10 @@ public class ThreeHorzCar extends HorzCar{
 		
 	}
 	
-	
+	/**
+	 * Method that moves the car's button to the left
+	 * @param trafficJam Integer array that determines if a move left is legal
+	 */
 	public void moveLeft(int[][] trafficJam){
 		if(column-1>=0 && column+2<6 && trafficJam[row][column-1]==0){
 			trafficJam[row][column+2]=0;
@@ -61,6 +73,10 @@ public class ThreeHorzCar extends HorzCar{
 		}
 	}
 	
+	/**
+	 * Method that moves the car's button to the right
+	 * @param trafficJam Integer array that determines if a move right is legal
+	 */
 	public void moveRight(int[][] trafficJam){
 		if(column+3<6 && trafficJam[row][column+3]==0){
 			trafficJam[row][column]=0;
@@ -76,6 +92,12 @@ public class ThreeHorzCar extends HorzCar{
 			System.out.println("moveright failed");
 		}
 	}
+	
+	/**
+	 * Method that adds a mouse listener to the move left button
+	 * @param trafficJam The integer array that determines if a move left is legal
+	 * @param b The button that the mouse listener will be added to
+	 */
 	public void moveLeftPress(int[][] trafficJam, JButton b){
 		b.addMouseListener(
 				new MouseListener(){
@@ -98,6 +120,11 @@ public class ThreeHorzCar extends HorzCar{
 		);
 	}
 	
+	/**
+	 * Method that adds a mouse listener to the move right button
+	 * @param trafficJam The integer array that determines if a move right is legal
+	 * @param b The button that the mouse listener will be added to
+	 */
 	public void moveRightPress(int[][] trafficJam,JButton b){
 		b.addMouseListener(
 				new MouseListener(){
