@@ -5,7 +5,11 @@ import java.util.Arrays;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
-
+/**
+ * A horizontal car that is three buttons in length
+ * @author Anderson
+ *
+ */
 public class ThreeHorzCar extends HorzCar{
 
 	//differences, movement has an extra step and now there is a third button
