@@ -7,7 +7,11 @@ import javax.swing.JButton;
 
 //convert everything here into a vertical car
 
-
+/**
+ * Sets up a vertical car of size 2
+ * @author Anderson
+ *
+ */
 public class TwoVertCar extends VertCar{
 
 
