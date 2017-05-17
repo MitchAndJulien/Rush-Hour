@@ -6,16 +6,51 @@ import javax.swing.JButton;
 
 public class VertCar{
 
+	/**
+	 * row in array of the top button for a vertical car
+	 */
 	protected int row;
-	protected int column;
-	protected int carCode;
-	protected JButton upButton;
-	protected JButton downButton;
-	protected int upButtonRow;
-	protected int upButtonColumn;
-	protected final int BUTTON_SIZE=150;
-	protected int lengthCode;
 	
+	/**
+	 * column in array of the top button for a vertical car
+	 */
+	protected int column;
+	
+	/**
+	 * An integer that is used to show car's spot in array and its color
+	 */
+	protected int carCode;
+	
+	/**
+	 * A JButton corresponding to the top button that allows the user to move up
+	 */
+	protected JButton upButton;
+	
+	/**
+	 * A JButton corresponding to the bottom button that allows the user to move down
+	 */
+	protected JButton downButton;
+	
+	/**
+	 * row position in JFrame that the button has
+	 */
+	protected int upButtonRow;
+	
+	/**
+	 * column position in JFrame that the button has
+	 */
+	protected int upButtonColumn;
+	
+	/**
+	 * Size of car buttons
+	 */
+	protected final int BUTTON_SIZE=150;
+	
+	/**
+	 * Sets up color of the car based on its code
+	 * @param b the button that is to be colored
+	 * @param code the integer that determines the car's color
+	 */
 	public void createColor(JButton b, int code){
 		if(code==1){
 			b.setBackground(Color.WHITE);
@@ -40,6 +75,15 @@ public class VertCar{
 		}
 	}
 	
+	/**
+	 * Creates a new button for a car object
+	 * @param upButtonColumn position of car's top button column in array
+	 * @param upButtonRow position of car's top button row in array
+	 * @param BUTTON_SIZE size of the button to be made
+	 * @param str what the button will do (move left, move up, etc.)
+	 * @param code corresponds to the car's color
+	 * @return
+	 */
 	public JButton createButton(int upButtonColumn, int upButtonRow, int BUTTON_SIZE, String str, int code){
 		JButton b=new JButton();
 		b.setBounds(upButtonColumn, upButtonRow, BUTTON_SIZE, BUTTON_SIZE);
