@@ -3,6 +3,11 @@ import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
+/**
+ * Sets up the screen the user sees when they win the game
+ * @author Anderson
+ *
+ */
 public class WinScreen {
 
 	/**
